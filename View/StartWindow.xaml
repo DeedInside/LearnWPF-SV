@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LearnWPF_SV.View"
         mc:Ignorable="d"
         Title="Моё первое окно"  Height="450" Width="500"
-        MinHeight="350" MinWidth="400">
+        >
     <Grid Background="Blue">
         <TabControl>
             <TabItem Header="Grid">
@@ -50,7 +50,70 @@
             <TabItem Header="StackPanel">
                 
             </TabItem>
-            
+            <TabItem Header="ComboBox">
+                <StackPanel>
+                    <ComboBox ItemsSource="{Binding Collection}" 
+                          SelectedItem="{Binding CollectionItem}">
+                    </ComboBox>
+                    <ListBox ItemsSource="{Binding Collection}"/>
+                    <Button Command="{Binding AddCommand}" Content="123123123"/>
+                </StackPanel>
+
+            </TabItem>
+            <TabItem Height="20" VerticalAlignment="Top">
+                <TabItem.Header>
+                    GridSplitter
+                </TabItem.Header>
+                <StackPanel>
+                    <Button  Content="button_1"></Button>
+                    <GridSplitter ShowsPreview="False" Width="3"
+                        HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+                    <Button Content="button_2"></Button>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="stackPanel">
+                <StackPanel>
+                    <Button Background="Beige" Content="1"></Button>
+                    <Button Margin="0 50 0 0" Background="Yellow" Content="2"></Button>
+                    <Button Background="Red" Content="3"></Button>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="DockPanel">
+                <DockPanel>
+                    <Button DockPanel.Dock="Right" Background="DarkTurquoise" FontSize="50" Content="Right"/>
+                    <Button DockPanel.Dock="Left"  Background="BurlyWood" FontSize="50" Content="Left 2"/>
+                    <Button DockPanel.Dock="Left"  Background="BurlyWood" FontSize="50" Content="Left 1"/>
+                    <Button Background="DarkTurquoise" Content="----------"/>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="WrapPanel">
+                <WrapPanel Orientation="Vertical" ItemHeight="60" ItemWidth="120" >
+                    <Button Background="DarkBlue" FontSize="10"  Content="button_1"/>
+                    <Button Background="Bisque" FontSize="20" Content="button_2"/>
+                    <Button Background="Yellow" FontSize="30" Content="button_3"/>
+                    <Button Background="Green" FontSize="40" Content="button_4"/>
+                </WrapPanel>
+            </TabItem>
+            <TabItem Header="Canvas">
+                <Grid Width="300" Height="300">
+                    <Canvas Background="Lavender">
+                        <Button Background="AliceBlue" Content="Top 20 Left 40" Canvas.Top="20" Canvas.Left="40" />
+                        <Button Background="LightSkyBlue" Margin="50 0 0 0" Content="Top 20 Right 20" Canvas.Top="20" Canvas.Right="20"/>
+                        <Button Background="Aquamarine" Content="Bottom 30 Left 20" Canvas.Bottom="30" Canvas.Left="20"/>
+                        <Button Background="LightCyan" Content="Bottom 20 Right 40" Canvas.Bottom="20" Canvas.Right="40"/>
+                    </Canvas>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Button">
+                <StackPanel>
+                    
+                    <Label Name="MyLable" FontSize="40" Content="--------"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Width="150" Background="Red" Name="MyButton" FontSize="40" Content="ЖМЯК"/>
+                        <Button Width="150" Background="Yellow" Name="MyButton_1" FontSize="40" Content="ЖМЯК"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>
