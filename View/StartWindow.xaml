@@ -114,6 +114,54 @@
                     </StackPanel>
                 </StackPanel>
             </TabItem>
+            <TabItem Header="TextBox">
+                <StackPanel>
+                    
+                    <TextBox Name="box" FontSize="40" Text="defaul value" />
+                    <RichTextBox/>
+                    <Button FontSize="40" Content="ЖМЯК" Click="Copu"/>
+                    <Label FontSize="40" Name="lab"/>
+                    <TextBlock FontSize="40" >
+                        123123123 
+                        qwqwe  qweqwe
+                            123
+                    </TextBlock>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="CheckBox">
+                <StackPanel>
+                    <StackPanel>
+                        <CheckBox Name="check1" Checked="CheckBox_Checked" Content="check 1"/>
+                        <CheckBox Name="chek2" IsChecked="False" Content="check 2"/>
+                        <CheckBox Content="check 3"/>
+                        <CheckBox Content="check 4"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <RadioButton GroupName="q" Name="radio" Content="radio 1" Checked="RadioButton"/>
+                        <RadioButton GroupName="q" Content="radio 2" Checked="RadioButton"/>
+                        <RadioButton GroupName="q" Content="radio 3" Checked="RadioButton"/>
+                    </StackPanel>
+                    <Label Content="----------------"/>
+                    <StackPanel>
+                        <RadioButton Content="radio 1"/>
+                        <RadioButton Content="radio 2"/>
+                        <RadioButton Content="radio 3"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="ToolTip">
+                <TabItem.ToolTip>
+                    <Label>
+                        подсказка 1
+                    </Label>
+                </TabItem.ToolTip>
+                <StackPanel>
+                    <TextBox ToolTip="q2weqweqewqwe" FontSize="40" Text="123123">
+                        
+                    </TextBox>
+                </StackPanel>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>
