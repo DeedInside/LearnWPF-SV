@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LearnWPF_SV.View"
         mc:Ignorable="d"
-        Title="Моё первое окно"  Height="450" Width="500"
+        Title="Моё первое окно"  Height="450" Width="900"
         >
     <Grid Background="Blue">
         <TabControl>
@@ -160,6 +160,35 @@
                     <TextBox ToolTip="q2weqweqewqwe" FontSize="40" Text="123123">
                         
                     </TextBox>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="ListBox">
+                <StackPanel>
+                    <ListBox FontSize="40" Name="list">
+                    </ListBox>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="ListView">
+                <StackPanel>
+                    <ListView Name="View" FontSize="40" SelectionChanged="View_SelectionChanged">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Id}" Header="id" />
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name" />
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Email}" Header="Email" />
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Password}" Header="password" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Label Name ="lab_1"/>
+                    <Label Name ="lab_2"/>
+                    <Label Name ="lab_3"/>
+                    <Label Name ="lab_4"/>
+                </StackPanel>
+            </TabItem> <!--todo-->
+            <TabItem Header="DataGrid">
+                <StackPanel >
+                    <DataGrid FontSize="40" Name="tableGrid"/>
                 </StackPanel>
             </TabItem>
         </TabControl>
